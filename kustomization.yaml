@@ -1,0 +1,24 @@
+resources:
+  - kuard-deployment.yaml
+  - kuard-service.yaml  
+
+namespace: infracoders
+
+commonLabels:
+  environment: staging
+
+commonAnnotations:
+  qosClass: HS1
+
+patchesJson6902:
+- target:
+    version: v1
+    kind: Service
+    name: kuard
+  path: patches/container-port.json
+
+imageTags:
+  - name: gcr.io/kuar-demo/kuard-amd64
+    newTag: "3"
+
+
