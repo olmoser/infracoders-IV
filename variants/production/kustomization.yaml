@@ -1,0 +1,8 @@
+bases:
+- ../base
+
+commonLabels:
+  environment: production 
+
+patches:
+- replicas.yaml
