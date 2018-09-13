@@ -15,7 +15,7 @@ patchesJson6902:
     version: v1
     kind: Service
     name: kuard
-  path: patches/container-port.json
+  path: patches/target-port.json
 
 imageTags:
   - name: gcr.io/kuar-demo/kuard-amd64
